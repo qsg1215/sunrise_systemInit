@@ -23,7 +23,7 @@ const GlobalHeaderRight = (props) => {
   }
 
   {{#unless isDoubleTheme}}
-  this.props.dispatch({
+    props.dispatch({
     type: 'themeModel/themeChangeHandle',
     payload: {
       theme:'light',
