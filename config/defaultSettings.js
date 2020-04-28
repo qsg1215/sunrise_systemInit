@@ -12,7 +12,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: '成都旸谷科技业务系统初始化平台',
+  title: '{{systemTitle}}',
   pwa: false,
   iconfontUrl: '//at.alicdn.com/t/font_1762118_d5v7tl0ikx.js',
   ...api
