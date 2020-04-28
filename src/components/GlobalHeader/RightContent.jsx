@@ -26,7 +26,7 @@ const GlobalHeaderRight = (props) => {
   this.props.dispatch({
     type: 'themeModel/themeChangeHandle',
     payload: {
-      theme: {{theme}},
+      theme:'light',
     },
   }); 
   {{else}}
