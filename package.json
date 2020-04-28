@@ -1,5 +1,5 @@
 {
-  "name": "ant-design-pro",
+  "name": "{{projectName}}",
   "version": "{{projectVersion}}",
   "private": true,
   "description": "An out-of-box UI solution for enterprise applications",
