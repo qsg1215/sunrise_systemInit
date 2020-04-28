@@ -1,7 +1,12 @@
 const Model = {
   namespace: 'themeModel',
   state: {
-    currentTheme: 'dark',
+    {{#unless isDoubleTheme}}
+    currentTheme: {{theme}},
+    {{else}}
+    currentTheme: 'light',
+     {{/if}}
+    
   },
   effects: {
     *themeChangeHandle({ payload }, { put }) {

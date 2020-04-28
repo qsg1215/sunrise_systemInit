@@ -22,16 +22,23 @@ const GlobalHeaderRight = (props) => {
     className = `${styles.right}  ${styles.dark}`;
   }
 
-
+  {{#unless isDoubleTheme}}
+  this.props.dispatch({
+    type: 'themeModel/themeChangeHandle',
+    payload: {
+      theme: {{theme}},
+    },
+  }); 
+  {{else}}
+     
+  {{/unless}}
 
   return (
     <div className={className}>
       {{#if isDoubleTheme}}
       <ThemeChange />
       {{else}}
-  
-       {{/if}}
-     
+     {{/if}}
       <Avatar />
       <UpdatePassword />
     </div>
