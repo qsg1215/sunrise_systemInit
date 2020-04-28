@@ -1,0 +1,190 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+  font-size: 16px;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+.ant-layout-header {
+  background-color: #fff !important;
+}
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub {
+  background-color: #fff !important;
+}
+:global {
+  .ant-switch-loading-icon,
+  .ant-switch::after {
+    background-color: #fff !important;
+  }
+  //覆盖菜单宽度
+  .ant-pro-sider-menu-sider.light {
+    // flex: 0 0 200px !important;
+    // width: 200px !important;
+    // min-width: 200px !important;
+    // max-width: 200px !important;
+  }
+  section {
+    &:nth-child(2) {
+      // padding-left: 200px !important;
+      .ant-pro-basicLayout-content {
+        margin: 12px;
+        // margin-top: 24px;
+      }
+    }
+  }
+  .ant-pro-page-header-wrap-page-header-warp {
+    margin-top: 24px;
+  }
+  .ant-pro-page-header-wrap-children-content {
+    margin-top: 12px !important;
+  }
+  .ant-pro-basicLayout .ant-layout-header:not(.ant-pro-top-menu) {
+    display: none;
+  }
+  a {
+    font-size: 16px !important;
+  }
+
+  @media (max-width: @screen-xs) {
+    .ant-pro-basicLayout .ant-layout-header:not(.ant-pro-top-menu) {
+      display: block;
+    }
+    .ant-pro-top-nav-header-logo {
+      display: none;
+      font-size: 14px;
+    }
+    .ant-table {
+      width: 100%;
+      overflow-x: auto;
+      &-thead > tr,
+      &-tbody > tr {
+        > th,
+        > td {
+          white-space: pre;
+          > span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-pro-top-nav-header-menu .ant-menu.ant-menu-horizontal {
+    display: none;
+  }
+  .antd-pro-components-global-header-index-right
+    .antd-pro-components-global-header-index-action
+    > span {
+    color: #fff !important;
+  }
+  .ant-pro-table-search {
+    margin-bottom: 12px !important;
+  }
+  //模态框间距
+  .ant-modal-body {
+    padding: 32px !important;
+  }
+  //全局必填表单红色标记
+  .ant-form-item-label > label.ant-form-item-required::before {
+    color: #ff4d4f !important;
+  }
+}
+
+.body-wrap-dark {
+  // theme1下的全局变量在此定义
+  --font-color: #000;
+  --bg-color: #011313;
+  :global {
+    .ant-layout-sider-children {
+      background: #1c2340;
+    }
+    .ant-layout-header {
+      color: #fff;
+      background-image: linear-gradient(to right, #133a6b, #0f2445);
+    }
+    .ant-menu.ant-menu-dark,
+    .ant-menu-dark .ant-menu-sub {
+      background-color: #1c2340 !important;
+    }
+    .ant-pro-sider-menu-sider.light .ant-pro-sider-menu-logo {
+      background-color: #1c2340;
+    }
+    .ant-pro-top-nav-header-logo h1 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    .ant-modal-content {
+      background-color: #1c2340 !important;
+    }
+    .ant-modal-header {
+      background-color: #1c2340 !important;
+    }
+  }
+}
+
+.body-wrap-light {
+  // theme1下的全局变量在此定义
+  --font-color: #fff;
+  --bg-color: #fff;
+  :global {
+    .ant-layout-header {
+      color: #fff;
+      background-image: linear-gradient(to right, #0da4de, #024a99);
+    }
+    .ant-pro-top-nav-header-logo h1 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 24px;
+    }
+  }
+}
