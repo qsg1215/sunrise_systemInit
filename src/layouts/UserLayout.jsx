@@ -3,7 +3,10 @@ import { Link, connect } from 'umi';
 import React from 'react';
 // import SelectLang from '@/components/SelectLang';
 import logo from '../assets/logo.svg';
+
 import styles from './UserLayout.less';
+
+
 
 const UserLayout = (props) => {
   const {
@@ -12,7 +15,6 @@ const UserLayout = (props) => {
   return (
     <HelmetProvider>
       <div className={styles.container}>
-    
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.header}>

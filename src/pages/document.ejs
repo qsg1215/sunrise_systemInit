@@ -23,14 +23,31 @@
     />
     <!-- <title>Ant Design Pro</title> -->
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
+   
+
     <!-- 百度地图 -->
     <script src="https://api.map.baidu.com/api?v=3.0&ak=4IU3oIAMpZhfWZsMu7xzqBBAf6vMHcoa"></script>
     <script src="/lib/echarts.min.js"></script>
     <script src="/lib/light.echarts.js"></script>
     <script src="/lib/dark.echarts.js"></script>
+    <script>
+      window.onerror = function(msg, url, rowNumber, colNumber, error) {
+        alert(
+          `
+          报错原因: ${msg};
+          报错网址:${url};
+          报错行号:${rowNumber};
+          报错列号:${colNumber};
+          浏览器UA: ${navigator.userAgent};
+          `
+        )
+      }
+   
+    </script>
+   
   </head>
   <body>
-    <noscript>Out-of-the-box mid-stage front/design solution!</noscript>
+    <noscript> 发生未知错误!</noscript>
     <div id="root">
       <style>
         html,
@@ -180,6 +197,7 @@
       </style>
       <div
         style="
+
           display: flex;
           flex-direction: column;
           align-items: center;

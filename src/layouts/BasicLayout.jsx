@@ -3,7 +3,7 @@
  * You can view component api by:
  * https://github.com/ant-design/ant-design-pro-layout
  */
-import ProLayout from '@ant-design/pro-layout';
+import ProLayout,{ PageHeaderWrapper }  from '@ant-design/pro-layout';
 import React, { useEffect } from 'react';
 import { Link, connect } from 'umi';
 import { Result, Button } from 'antd';
@@ -11,6 +11,8 @@ import Authorized from '@/utils/Authorized';
 import RightContent from '@/components/GlobalHeader/RightContent';
 import { getAuthorityFromRouter } from '@/utils/utils';
 import logo from '../assets/logo.svg';
+
+const whiteRouteList = ['/dashboard']; // 不要路由的菜单路径配置
 
 const noMatch = (
   <Result
@@ -71,6 +73,8 @@ const BasicLayout = (props) => {
     authority: undefined,
   };
 
+
+
   return (
     <ProLayout
       layout="topmenu"
@@ -127,7 +131,11 @@ const BasicLayout = (props) => {
         {...settings}
       >
         <Authorized authority={authorized.authority} noMatch={noMatch}>
-          {children}
+          {
+            whiteRouteList.includes(props.location.pathname)? children : <PageHeaderWrapper title={false}>
+            {children}
+           </PageHeaderWrapper>
+          }
         </Authorized>
       </ProLayout>
     </ProLayout>

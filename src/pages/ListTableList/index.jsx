@@ -1,7 +1,6 @@
 import { DownOutlined, PlusOutlined } from '@ant-design/icons';
 import { Button, Divider, Dropdown, Menu, message, Input } from 'antd';
 import React, { useState, useRef } from 'react';
-import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import ProTable from '@ant-design/pro-table';
 import CreateForm from './components/CreateForm';
 import UpdateForm from './components/UpdateForm';
@@ -164,8 +163,8 @@ const TableList = () => {
     },
   ];
   return (
-    <PageHeaderWrapper>
-      <ProTable
+    <div>
+       <ProTable
         headerTitle="查询表格"
         actionRef={actionRef}
         rowKey="key"
@@ -267,7 +266,9 @@ const TableList = () => {
           values={stepFormValues}
         />
       ) : null}
-    </PageHeaderWrapper>
+     </div>
+     
+    
   );
 };
 

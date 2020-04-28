@@ -3,6 +3,9 @@ import React from 'react';
 import defaultSettings from '../config/defaultSettings';
 
 const { pwa } = defaultSettings; // if pwa is true
+const { version } = defaultSettings;
+// eslint-disable-next-line no-console
+console.log(`版本号:${version}`);
 
 if (pwa) {
   // Notify user if offline now

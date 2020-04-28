@@ -78,6 +78,7 @@ export default class Dashboard extends React.Component {
     this.themeChangeSubscribe = PubSub.subscribe('themeChange', (type, theme) => {
       map.setMapStyleV2({ styleJson: MapTheme[theme] });
     });
+   
   }
 
   // 移除主题订阅
