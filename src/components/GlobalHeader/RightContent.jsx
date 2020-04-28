@@ -3,11 +3,7 @@ import { connect } from 'umi';
 import Avatar from './AvatarDropdown';
 {{#if isDoubleTheme}}
 import ThemeChange from './ThemeChange';
-{{else}}
-  
 {{/if}}
-  
-
 import UpdatePassword from './UpdatePassword';
 import styles from './index.less';
 
@@ -15,9 +11,7 @@ import styles from './index.less';
 
 const GlobalHeaderRight = (props) => {
   const { theme, layout } = props;
-
   let className = styles.right;
-
   if (theme === 'dark' && layout === 'topmenu') {
     className = `${styles.right}  ${styles.dark}`;
   }
@@ -28,17 +22,12 @@ const GlobalHeaderRight = (props) => {
     payload: {
       theme:'light',
     },
-  }); 
-  {{else}}
-     
-  {{/unless}}
+  });{{/unless}}
 
   return (
     <div className={className}>
       {{#if isDoubleTheme}}
-      <ThemeChange />
-      {{else}}
-     {{/if}}
+      <ThemeChange /> {{/if}}
       <Avatar />
       <UpdatePassword />
     </div>
